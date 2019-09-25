@@ -1,0 +1,11 @@
+function setup() {
+  createCanvas(400, 400);
+  frameRate(100);
+}
+
+function draw() {
+  background(220, 40);
+  noStroke();
+  fill(random(205), random(10), random(125));
+  ellipse(random(width), random(height), random(10, 20));
+}
