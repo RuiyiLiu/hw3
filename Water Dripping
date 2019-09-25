@@ -1,0 +1,26 @@
+var x = 230;
+var y = 220;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(230, 126, 34);
+  noStroke();
+
+  // draw pipe
+  rect(160, 300, 100, 20);
+
+  // draw drip
+  ellipse(210, y, 20);
+
+  // down 3 pixels each frame, but maybe should be accelerating?
+  y = y + 6
+
+  // if invisible for a full “height” amount…
+  if (y > height*1) {
+    // reset
+    y = 20;
+  }
+}
